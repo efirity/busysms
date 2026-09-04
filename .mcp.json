@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "busysms": {
+      "url": "https://busysms.net/mcp",
+      "transport": "http"
+    }
+  }
+}

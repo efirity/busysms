@@ -1,0 +1,15 @@
+{
+  "name": "busysms",
+  "description": "The official BusySMS plugin: read SMS verification codes from phones you own, over MCP.",
+  "owner": {
+    "name": "EFIRITY PTE. LTD.",
+    "url": "https://busysms.net"
+  },
+  "plugins": [
+    {
+      "name": "busysms",
+      "source": "./",
+      "description": "Read SMS verification codes from phones you own. Connects Claude to your own BusySMS gateway over MCP, with a skill for the wait-for-a-code workflow."
+    }
+  ]
+}

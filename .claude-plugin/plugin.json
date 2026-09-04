@@ -1,0 +1,20 @@
+{
+  "name": "busysms",
+  "displayName": "BusySMS",
+  "version": "1.0.0",
+  "description": "Read SMS verification codes from phones you own. Connects Claude to your own BusySMS gateway over MCP, with a skill for the wait-for-a-code workflow.",
+  "author": {
+    "name": "EFIRITY PTE. LTD.",
+    "url": "https://busysms.net"
+  },
+  "homepage": "https://busysms.net",
+  "repository": "https://github.com/efirity/busysms",
+  "license": "MIT",
+  "keywords": [
+    "sms",
+    "otp",
+    "2fa",
+    "verification",
+    "mcp"
+  ]
+}

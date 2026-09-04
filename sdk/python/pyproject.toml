@@ -1,0 +1,19 @@
+[project]
+name = "busysms"
+version = "1.0.0"
+description = "Read SMS verification codes from phones you own, over the BusySMS API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["sms", "otp", "2fa", "verification"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://busysms.net"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["busysms"]
