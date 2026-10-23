@@ -8,6 +8,7 @@
     "url": "https://busysms.net"
   },
   "homepage": "https://busysms.net",
+  "privacyPolicyUrl": "https://busysms.net/privacy",
   "repository": "https://github.com/efirity/busysms",
   "license": "MIT",
   "keywords": [
