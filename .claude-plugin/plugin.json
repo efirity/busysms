@@ -16,5 +16,6 @@
     "2fa",
     "verification",
     "mcp"
-  ]
+  ],
+  "icon": "./assets/icon.png"
 }

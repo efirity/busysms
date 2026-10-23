@@ -24,6 +24,14 @@ which may be hours old. Read `message.receivedAt` before trusting it against a
 login the user started a moment ago. Takes the same `deviceId` and `service`
 filters.
 
+## `get_latest_sms`
+
+The newest SMS in full: `{ ok, sms, code, from, receivedAt, message }`. Use it
+when the user wants the whole text (a magic link, a message to paste), not just
+the code. Filters are contains-matches: `service`, `sender`, `phone` (last
+digits are enough) and `deviceId`. In hosts that render MCP Apps it shows a
+one-click **Copy SMS** button. Same billing gate as the code tools.
+
 ## `list_my_devices`
 
 Each device carries `numberVerified`, `online`, `sharing`, `phone`, `name` and
