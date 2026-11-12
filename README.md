@@ -15,6 +15,7 @@ nobody else's messages are ever in reach.
 - iPhone app — beta, see <https://busysms.net/forward-sms-from-iphone>
 - Chrome OTP autofill — [Chrome Web Store](https://chromewebstore.google.com/detail/busysms-otp-autofill/ldfcokkihcbnemkcppecagnelblnebbg)
 - Firefox OTP autofill — [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/busysms-otp-autofill/)
+- Safari OTP autofill (Mac) — [Mac App Store](https://apps.apple.com/app/busysms-otp-autofill/id6825780337)
 - MCP endpoint — `https://busysms.net/mcp`
 
 This repository is the Claude Code plugin: the MCP connection and the
