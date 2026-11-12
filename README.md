@@ -3,16 +3,18 @@
 **Turn phones you already own into an SMS gateway, and read their verification
 codes from your own code, or from an AI agent.**
 
-BusySMS runs on your Android phones and captures the verification and OTP
+BusySMS runs on your Android phones and iPhones and captures the verification and OTP
 messages that arrive on your own SIMs. You read them back over a REST API, over
-MCP, or let the Chrome extension fill them into a login form for you.
+MCP, or let the browser extension fill them into a login form for you.
 
 It is not a rented-number pool. The numbers are yours, the SIMs are yours, and
 nobody else's messages are ever in reach.
 
 - Website — <https://busysms.net>
 - Android app — [Google Play](https://play.google.com/store/apps/details?id=net.busysms.app)
+- iPhone app — beta, see <https://busysms.net/forward-sms-from-iphone>
 - Chrome OTP autofill — [Chrome Web Store](https://chromewebstore.google.com/detail/busysms-otp-autofill/ldfcokkihcbnemkcppecagnelblnebbg)
+- Firefox OTP autofill — [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/busysms-otp-autofill/)
 - MCP endpoint — `https://busysms.net/mcp`
 
 This repository is the Claude Code plugin: the MCP connection and the
@@ -49,6 +51,12 @@ An API key used over MCP is **read-only and scope-checked per tool**. It cannot
 mint another API key, cannot send an SMS or an email, and cannot reach any
 operator tool. A key issued with the narrow `codes:read` scope reads codes and
 cannot even list your phone numbers.
+
+Personal texts are never in reach by default. If you sync all texts from a SIM
+(Android, opt-in per SIM), an agent sees them only when you tick **Allow
+personal texts** on the sign-in consent screen, or create a key with the
+`texts:read` scope. BusySMS's own sign-in codes are never handed to an agent or
+a key.
 
 Anything that spends money or creates a credential requires a real sign-in, not
 a key. So handing a key to an agent gives it exactly the reach you intended.
@@ -94,8 +102,14 @@ a generic failure: retrying will never fix it.
 
 ## What is captured
 
-Verification and OTP messages only, on SIMs you have verified. Not your inbox.
-Everything is scoped to your own organisation.
+Verification and OTP messages, on SIMs you have verified. On Android you can
+also choose to sync every text on a SIM; those stay private to you and reach an
+agent or key only with the opt-in above. Everything is scoped to your own
+organisation.
+
+Message text is written by whoever sent it. The MCP tools mark it as
+untrusted, and the skill tells the model to treat it as data, never as
+instructions.
 
 ## License
 
